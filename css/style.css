@@ -1,0 +1,240 @@
+body {
+    background-color: #FFF8E7;
+}
+
+html {
+    scroll-padding-top: 5rem;
+    scroll-behavior: smooth;
+}
+
+/* navbar */
+.navbar-brand {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #fff;
+    font-style: italic;
+    margin-top: auto;
+}
+
+.navbar-brand,
+.span,
+.span2 {
+    color: #FFD700;
+}
+
+/* jumbotron */
+.jumbotron {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-image: url('/img/WarisanRestaurant.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+.jumbotron::after {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 30%;
+    bottom: 0;
+    background: linear-gradient(0deg, #FFF8E7 8%, #e1e1e100 55%);
+}
+
+/* about */
+.about {
+    padding: 3rem;
+    min-height: 300px;
+}
+
+/* menu */
+.menu h2,
+.contact h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.menu p,
+.contact p {
+    text-align: center;
+    max-width: 30rem;
+    margin: auto;
+    font-weight: 100;
+    line-height: 1.6;
+    color: black;
+}
+
+.menu .row {
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 3rem;
+}
+
+.menu .row .card {
+    margin: 0.5rem;
+    padding-top: 0.8rem;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu .row .card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card .card-text {
+    text-align: left;
+}
+
+.card .menu-card-price {
+    padding-top: 0.5rem;
+}
+
+.card .menu-card-rating {
+    color: #FFD700;
+    font-size: 1.2em;
+    text-align: left;
+}
+
+.menu .card-img-top {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.menu .row .card .card-body .p {
+    text-align: left;
+}
+
+.menu .row .card .btn {
+    margin-top: 0.8rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    background-color: #b22222;
+    color: #fff;
+}
+
+/* Contact section */
+.contact {
+    padding: 5rem 1rem;
+    background-color: #FFF8E7;
+}
+
+.contact h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.contact p {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    color: #555;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+/* Layout Kontainer Map dan Form */
+.contact .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Map Styling */
+.contact .map {
+    width: 100%;
+    height: 400px;
+    border: 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Styling */
+.contact form {
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Input, Textarea, dan Button dalam Form */
+.contact form .form-label {
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.contact form .form-control {
+    border-radius: 4px;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s;
+}
+
+.contact form .form-control:focus {
+    border-color: #FFD700;
+    box-shadow: 0 0 4px rgba(255, 215, 0, 0.3);
+}
+
+.contact form textarea {
+    resize: none;
+    min-height: 120px;
+}
+
+.contact form button {
+    background-color: #b22222;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #b92e2e;
+}
+
+/* footer */
+footer .links a:hover {
+    color: #FFF8E7;
+}
+
+footer .links {
+    margin-bottom: 1.4rem;
+}
+
+footer .links a {
+    color: #fff;
+    padding: 0.7rem 1rem;
+}
+
+/*laptop */
+@media (min-width: 1024px) {
+    .contact .row {
+        flex-direction: row;
+    }
+
+    .contact .col-md-4,
+    .contact .col-md-8 {
+        flex: 1;
+        max-width: 48%;
+    }
+
+    .contact .map {
+        height: 570px;
+    }
+}
