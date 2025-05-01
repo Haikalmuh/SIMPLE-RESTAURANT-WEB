@@ -21,7 +21,6 @@ html {
     margin-top: auto;
 }
 
-.navbar-brand,
 .span,
 .span2 {
     color: #FFD700;
@@ -29,25 +28,61 @@ html {
 
 /* jumbotron */
 .jumbotron {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background-image: url('/img/WarisanRestaurant.jpg');
-    background-repeat: no-repeat;
+    background-image: url('../img/dalleresto.webp');
+    /* Ganti dengan gambar hero kamu */
     background-size: cover;
     background-position: center;
+    height: 100vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
     position: relative;
 }
 
 .jumbotron::after {
     content: '';
-    display: block;
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 30%;
-    bottom: 0;
-    background: linear-gradient(0deg, #FFF8E7 8%, #e1e1e100 55%);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Overlay gelap */
+    z-index: 1;
 }
+
+.jumbotron-content {
+    position: relative;
+    z-index: 2;
+}
+
+.jumbotron h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.jumbotron p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn {
+    background-color: #e67e22;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #cf711f;
+}
+
 
 /* about */
 .about {
@@ -67,7 +102,7 @@ html {
     text-align: center;
     max-width: 30rem;
     margin: auto;
-    font-weight: 100;
+    font-weight: 400;
     line-height: 1.6;
     color: black;
 }
@@ -137,14 +172,14 @@ html {
     color: #333;
 }
 
-.contact p {
+/* .contact p {
     text-align: center;
     max-width: 600px;
     margin: 0 auto 3rem;
     color: #555;
     font-weight: 300;
     line-height: 1.6;
-}
+} */
 
 /* Layout Kontainer Map dan Form */
 .contact .row {
@@ -213,18 +248,89 @@ html {
 }
 
 /* footer */
-footer .links a:hover {
-    color: #FFF8E7;
-}
-
-footer .links {
-    margin-bottom: 1.4rem;
-}
-
-footer .links a {
+.footer {
+    background-color: #b22222;
     color: #fff;
-    padding: 0.7rem 1rem;
+    padding: 2rem 1rem;
+    font-family: 'Poppins', sans-serif;
 }
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.footer h4 {
+    margin-bottom: 0.8rem;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #ffd700;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
+.footer-bottom p {
+    margin: 0.2rem 0;
+    font-size: 0.85rem;
+}
+
+.footer-bottom a {
+    color: #fff;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+    color: #ffd700;
+}
+
+.footer-links ul {
+    list-style: none;
+    /* Hilangkan bullet default */
+    padding-left: 1.5rem;
+    /* Tambah ruang kiri agar gak nempel */
+}
+
+.footer-links ul li {
+    position: relative;
+    padding-left: 1.2rem;
+    /* Ruang buat lingkaran */
+    margin-bottom: 0.5rem;
+}
+
+.footer-links ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.5em;
+    width: 0.5em;
+    height: 0.5em;
+    background-color: white;
+    /* Warna lingkaran */
+    border-radius: 50%;
+}
+
+
 
 /*laptop */
 @media (min-width: 1024px) {
@@ -240,5 +346,49 @@ footer .links a {
 
     .contact .map {
         height: 570px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .menu h2,
+    .contact h2,
+    .about h2 {
+        font-size: 1.3rem;
+    }
+
+    .about p,
+    .menu p,
+    .contact p {
+        font-size: 0.9rem;
+    }
+
+    .menu-text {
+        padding: 0 1.6rem;
+    }
+
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-logo,
+    .footer-links,
+    .footer-contact {
+        margin-bottom: 0.5rem;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+    .jumbotron-content h1 {
+        font-size: xx-large;
     }
 }
